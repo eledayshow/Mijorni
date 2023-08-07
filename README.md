@@ -19,3 +19,4 @@
 Затем считаем количество строк (не пустых) в <code>dataset/train_data_0.txt</code> и (отдельно) <code>dataset/train_data_0.txt</code>. Запускаем <code>str_gen.py</code> и подставляем полученное, получаем строку, которую подставляем в <code>targets</code> в <code>defs.py</code>. Теперь просто запускаем <code>train.py</code> и ждем окончания обучения.
 
 ### Запуск
+По желанию меняем <code>mxm</code> в <code>main.py</code> (чем больше, тем лучше будут картинки)
