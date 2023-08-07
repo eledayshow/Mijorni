@@ -14,6 +14,8 @@
 Коды обучаемых картинок пишутся в 2 файла - <code>dataset/train_data_0.txt</code> (лайкнутые) и <code>dataset/train_data_0.txt</code> (дизлайкнутые). Новый запуск <code>create_dataset.py</code> будет добавлять новые коды и не будет стирать старые. Если нужно, эти файлы можно очистить самостоятельно.
 
 ### Обучение
-Чтобы обучить нейронку, нужно подставить полученный датасет. Впереди немного костылей, простите) Убираем все, что внутри <code>inputs</code>, чтобы получилось так: <code>inputs = np.array([])</code> и в эти скобки копируем сначала все из <code>dataset/train_data_0.txt</code>, потом все из <code>dataset/train_data_1.txt</code>.
+Чтобы обучить нейронку, нужно подставить полученный датасет. Впереди немного костылей, простите) Убираем все, что внутри <code>inputs</code> в <code>defs.py</code>, чтобы получилось так: <code>inputs = np.array([])</code> и в эти скобки копируем сначала все из <code>dataset/train_data_0.txt</code>, потом все из <code>dataset/train_data_1.txt</code>.
 
-Затем считаем количество строк (не пустых) в <code>dataset/train_data_0.txt</code> и (отдельно) <code>dataset/train_data_0.txt</code>. Запускаем <code>str_gen.py</code> и подставляем полученное, получаем строку, которую подставляем в 
+Затем считаем количество строк (не пустых) в <code>dataset/train_data_0.txt</code> и (отдельно) <code>dataset/train_data_0.txt</code>. Запускаем <code>str_gen.py</code> и подставляем полученное, получаем строку, которую подставляем в <code>targets</code> в <code>defs.py</code>. Теперь просто запускаем <code>train.py</code> и ждем окончания обучения.
+
+### Запуск
