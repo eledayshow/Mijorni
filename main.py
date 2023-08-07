@@ -3,7 +3,7 @@ from defs import *
 
 weights = np.load('weights.npy')
 
-mxm = .9
+mxm = .9 # <= 1
 m = 0
 i = 0
 while m < mxm:
